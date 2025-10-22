@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { fetchUserProfile } from "../service/api";
 
 const Home = () => {
@@ -48,7 +48,7 @@ const Home = () => {
                 className="cursor-pointer w-full bg-linear-to-r from-red-500 to-red-600 text-white font-semibold py-3 rounded-lg hover:from-red-600 hover:to-red-700 focus:ring-4 focus:ring-red-300 transition duration-200 shadow-lg hover:shadow-xl flex items-center justify-center gap-2"
                 onClick={() => {
                   localStorage.removeItem("token");
-                  window.location.href = "/auth";
+                  window.location.reload();
                 }}
               >
                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
